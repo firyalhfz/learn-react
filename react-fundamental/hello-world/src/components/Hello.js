@@ -1,6 +1,6 @@
 // JSX
 
-import React from "react";
+import React from 'react'
 
 const Hello = () => {
   // return (
@@ -11,11 +11,10 @@ const Hello = () => {
 
   // tag name, attribute, children
   return React.createElement(
-    "div",
-    { id: "hello", className: "dummyClass" },
-    React.createElement("h1", null, "Hello Firyal")
-  );
-};
+    'div',
+    { id: 'hello', className: 'dummyClass' },
+    React.createElement('h1', null, 'Hello Firyal')
+  )
+}
 
-export default Hello;
- 
+export default Hello

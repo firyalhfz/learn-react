@@ -1,31 +1,31 @@
-import React from "react";
-import Person from "./Person";
+import React from 'react'
+import Person from './Person'
 
 function NameList() {
   const persons = [
     {
       id: 1,
-      name: "Eren",
+      name: 'Eren',
       age: 22,
-      skill: "React",
+      skill: 'React',
     },
     {
       id: 2,
-      name: "Mikasa",
+      name: 'Mikasa',
       age: 20,
-      skill: "IOS",
+      skill: 'IOS',
     },
     {
       id: 3,
-      name: "Armin",
+      name: 'Armin',
       age: 22,
-      skill: "Kotlin",
+      skill: 'Kotlin',
     },
-  ];
+  ]
   const personList = persons.map((person, index) => (
     <Person key={index} person={person}></Person>
-  ));
-  return <div>{personList}</div>;
+  ))
+  return <div>{personList}</div>
 }
 
-export default NameList;
+export default NameList
