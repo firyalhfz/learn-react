@@ -26,12 +26,12 @@ const NewCardItem = props => {
       {props.dataCard.map(card => {
         return (
           <Item>
-            <Typography key={card.id}>{card.title}</Typography>
-            <Typography key={card.id}>{card.subtitle}</Typography>
-            <Typography key={card.id}>{card.price}</Typography>
             <CardMedia key={card.id}>
               <Img src={card.img} />
             </CardMedia>
+            <Typography key={card.id}>{card.title}</Typography>
+            <Typography key={card.id}>{card.subtitle}</Typography>
+            <Typography key={card.id}>{card.price}</Typography>
           </Item>
         )
       })}
