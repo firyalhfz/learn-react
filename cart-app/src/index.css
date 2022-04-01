@@ -96,3 +96,7 @@ button.badge {
   color: #ffffff;
   width: 1.5rem;
 }
+
+.text-right{
+  text-align: right;
+}
