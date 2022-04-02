@@ -1,17 +1,18 @@
 import React from 'react'
 
 function Basket(props) {
-  const { cartItems, onAdd, onRemove } = props
+  const { product, cartItems, onAdd, onRemove } = props
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
   const taxPrice = itemsPrice * 0.14
   const shippingPrice = itemsPrice > 2000 ? 0 : 50
   const totalPrice = itemsPrice + taxPrice + shippingPrice
 
+  console.log(cartItems);
   // aside is html tag to show side bar
   return (
     <aside className="block col-1">
       <h2>Cart Items</h2>
-      <div>{cartItems.length === 0 && <div>Cart is Empty</div>}</div>
+      <div>{cartItems.length === 0 && <div>the cart is empty</div>}</div>
       {cartItems.map(item => (
         <div key={item.id} className="row">
           <div className="col-2">{item.name}</div>

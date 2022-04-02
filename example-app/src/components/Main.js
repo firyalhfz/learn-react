@@ -1,4 +1,5 @@
 import React from 'react'
+import Basket from './Basket'
 import Product from './Product'
 
 function Main(props) {

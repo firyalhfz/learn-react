@@ -41,8 +41,13 @@ function Home() {
       <div className="App">
         <Header countCartItems={cartItems.length} />
         <div className="row">
-          <Main onAdd={onAdd} onRemove={onRemove} products={products} />
-          <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
+          <Main
+            onAdd={onAdd}
+            onRemove={onRemove}
+            products={products}
+            cartItems={cartItems}
+          />
+          {/* <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> */}
         </div>
       </div>
     </Container>
