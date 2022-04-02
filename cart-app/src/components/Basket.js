@@ -3,8 +3,8 @@ import React from 'react'
 function Basket(props) {
   const { cartItems, onAdd, onRemove } = props
   const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0)
-  const taxPrice = itemsPrice * 0.14;
-  const shippingPrice = itemsPrice > 2000 ? 0 : 50;
+  const taxPrice = itemsPrice * 0.14
+  const shippingPrice = itemsPrice > 2000 ? 0 : 50
   const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   // aside is html tag to show side bar
@@ -48,7 +48,16 @@ function Basket(props) {
             <div className="col-2">
               <strong>Total Price</strong>
             </div>
-            <div className="col-1 text-right"><strong>{totalPrice.toFixed(2)}</strong></div>
+            <div className="col-1 text-right">
+              <strong>{totalPrice.toFixed(2)}</strong>
+            </div>
+          </div>
+          <hr />
+          <div className="row">
+            <button onClick={() => alert('Implement Checkout')}>
+              {' '}
+              Checkout
+            </button>
           </div>
         </>
       )}
