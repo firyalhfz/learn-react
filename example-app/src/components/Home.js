@@ -47,7 +47,7 @@ function Home() {
             products={products}
             cartItems={cartItems}
           />
-          {/* <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} /> */}
+          <Basket onAdd={onAdd} onRemove={onRemove} cartItems={cartItems} />
         </div>
       </div>
     </Container>

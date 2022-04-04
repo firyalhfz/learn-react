@@ -2,14 +2,14 @@ import React from 'react'
 import { useState } from 'react'
 
 function Product(props) {
-  // const { product, onAdd } = props
+  const { product, onAdd } = props
 
   //from basket
-  const { product, cartItems, onAdd, onRemove } = props
-  const itemsPrice = cartItems?.reduce((a, c) => a + c.price * c.qty, 0)
-  const taxPrice = itemsPrice * 0.14
-  const shippingPrice = itemsPrice > 2000 ? 0 : 50
-  const totalPrice = itemsPrice + taxPrice + shippingPrice
+  // const { product, cartItems, onAdd, onRemove } = props
+  // const itemsPrice = cartItems?.reduce((a, c) => a + c.price * c.qty, 0)
+  // const taxPrice = itemsPrice * 0.14
+  // const shippingPrice = itemsPrice > 2000 ? 0 : 50
+  // const totalPrice = itemsPrice + taxPrice + shippingPrice
 
   return (
     <div>
@@ -21,7 +21,7 @@ function Product(props) {
           <button onClick={() => onAdd(product)}>add to cart</button>
         </div>
       </div>
-      <aside className="block col-1">
+      {/* <aside className="block col-1">
         <h2>Cart Items</h2>
         <div>{cartItems?.length === 0 && <div>the cart is empty</div>}</div>
         {cartItems?.map(item => (
@@ -41,7 +41,7 @@ function Product(props) {
           </div>
         ))}
         {/* todo3 */}
-        {cartItems?.length !== 0 && (
+        {/* {cartItems?.length !== 0 && (
           <>
             <hr></hr>
             <div className="row">
@@ -72,8 +72,8 @@ function Product(props) {
               </button>
             </div>
           </>
-        )}
-      </aside>
+        )} */} 
+      {/* </aside> */}
     </div>
   )
 }
