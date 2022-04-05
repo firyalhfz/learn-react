@@ -36,6 +36,24 @@ function Home() {
       )
     }
   }
+
+  // const onChange = product => {
+  //   const { buy, setBuy } = useState(false)
+  //   if (buy) {
+  //     ;<>
+  //       <button
+  //         onClick={function () {
+  //           setBuy(false)
+  //         }}
+  //       >
+  //         -
+  //       </button>
+  //       <button>1</button>
+  //       <button>+</button>
+  //     </>
+  //   }
+  // }
+
   return (
     <Container maxWidth="lg">
       <div className="App">
