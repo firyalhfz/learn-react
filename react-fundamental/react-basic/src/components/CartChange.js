@@ -11,7 +11,7 @@ function CartChange() {
             setLogin(false)
           }}
         >
-          -
+          ---
         </button>
         <button>1</button>
         <button>+</button>
