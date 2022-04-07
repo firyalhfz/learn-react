@@ -1,15 +1,15 @@
 import './App.css'
-import NameList from './components/NameList'
-import Greet from './components/Greet'
-import Welcome from './components/Welcome'
-import Hello from './components/Hello'
-import Message from './components/Message'
-import Counter from './components/Counter'
+// import NameList from './components2/NameList'
+// import Greet from './components2/Greet'
+// import Welcome from './components2/Welcome'
+// import Hello from './components2/Hello'
+// import Message from './components2/Message'
+// import Counter from './components2/Counter'
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      {/* <Counter />
       <Message />
       <Greet name="firyal" heroName="armin">
         {' '}
@@ -21,7 +21,7 @@ function App() {
       <Greet name="salwa" heroName="mikasa" />
       <Welcome name="firyal" heroName="armin" />
       <Welcome name="ilyas" heroName="eren" />
-      <Welcome name="salwa" heroName="mikasa" />
+      <Welcome name="salwa" heroName="mikasa" /> */}
       {/* <Hello /> */}
       {/* <NameList></NameList> */}
     </div>
