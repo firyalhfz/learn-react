@@ -1,5 +1,6 @@
-import Header from './components/Header'
+// import Header from './components/Header'
 import { useState } from 'react'
+import ProductList from './components/ProductList'
 
 function App() {
   // const title = 'welcome to my app'
@@ -25,6 +26,10 @@ function App() {
   //   setAge(40)
   // }
 
+  const deleteProduct = (productId) => {
+    const newProducts = products.filter(product => product.id !== productId)
+    setProducts(newProducts)
+  }
   return (
     <div className="App">
       {/* <h1>{title}</h1>
@@ -33,13 +38,7 @@ function App() {
       <Header />
       <button onClick={() => clickMe('firyal')}>Click me </button>
       <button onClick={changeTitle}>Change Title </button> */}
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            {product.title} - {product.price}
-          </li>
-        ))}
-      </ul>
+      <ProductList products={products} deleteProduct={deleteProduct}/>
     </div>
   )
 }
