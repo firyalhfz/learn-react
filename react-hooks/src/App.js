@@ -1,5 +1,5 @@
 // import Header from './components/Header'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import ProductList from './components/ProductList'
 
 function App() {
@@ -21,6 +21,8 @@ function App() {
     { id: 5, title: 'Product 5', price: 800 },
   ])
 
+  const [name, setName] = useState(['firyal'])
+
   // const changeTitle = () => {
   //   setTitle('title changed')
   //   setAge(40)
@@ -30,6 +32,11 @@ function App() {
     const newProducts = products.filter(product => product.id !== productId)
     setProducts(newProducts)
   }
+
+  useEffect(() => {
+      console.log('Use effect running');
+  }, [name])
+
   return (
     <div className="App">
       {/* <h1>{title}</h1>
@@ -39,6 +46,8 @@ function App() {
       <button onClick={() => clickMe('firyal')}>Click me </button>
       <button onClick={changeTitle}>Change Title </button> */}
       <ProductList products={products} deleteProduct={deleteProduct}/>
+      <button onClick={() => setName('Mikasa')}>Change Name</button>
+      <p>{name}</p>
     </div>
   )
 }
